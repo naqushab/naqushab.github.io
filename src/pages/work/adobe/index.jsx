@@ -32,11 +32,11 @@ const Adobe = ({ location }) => {
       <ProjectIntro project={project} media={image} />
       <ProjectDescription media={macbooks}>
         <h3>Responsibilities</h3>
-        <p>1. Automation Framework of Adobe Acrobat</p>
-        <p>2. Developement and Deployment of Performance Benchmark framework using Python, Javascript at backend and PHP, MySQL at frontend.</p>
-        <p>3. Development and Deployment of a Jenkins framework to identify regressions in product across different configurations using Python, Batch, JS</p>
-        <p>4. Development of various automated tools and mechanisms to increase productivity and reduce manual efforts</p>
-        <p>5. Writing unit tests and feature tests of various work-flows involved in Adobe Acrobat</p>
+        <p>1. Pipeline Orchestration and Framework management of Liquid Mode pipeline </p>
+        <p>2. Objective Evaluation and Visualization of Liquid Mode Outcome </p>
+        <p>3. Automation Framework development and management </p>
+        <p>4. Benchmarking of Performance of pipeline workflow using Python and React for Front End </p>
+        <p>5. Development and Management of CI/CD services of various Liquid Mode/Acrobat components </p>
         <h3>Role</h3>
         <p>I got hired at Adobe on Jun 27, 2016 as a Software Engineer in the <OutboundLink to="https://acrobat.adobe.com/in/en/">Document Cloud</OutboundLink> team. I am currently in Acrobat team which currently works on Liquid Mode functionality.</p>
       </ProjectDescription>
