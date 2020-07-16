@@ -1,16 +1,15 @@
 import React from 'react';
-import { prefixLink } from 'gatsby-helpers';
+import Link from 'gatsby-link';
 
-import Fullscreen from 'components/fullscreen';
-import Meta from 'components/meta';
-import Wrapper from 'components/wrapper';
-import { Link } from 'react-router';
+import Fullscreen from '../components/fullscreen';
+import Meta from '../components/meta';
+import Wrapper from '../components/wrapper';
 
 import styles from './styles.module.css';
 
-const Index = () => (
+const Index = ({ location }) => (
   <div>
-    <Meta />
+    <Meta location={location} />
     <Fullscreen className={styles.intro} firstItem>
       <Wrapper>
         <h1>
