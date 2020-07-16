@@ -16,7 +16,7 @@ const Index = ({ location }) => (
           Hello. I’m Naqushab Neyazee.
           <br />
           <br />
-          I’m a Software Engineer - II at Adobe India.
+          I’m Lead Software Engineer at Adobe India.
           <br />
           <br />
           Check out my <Link className={styles.link} to="/work">work</Link>.
