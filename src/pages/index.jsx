@@ -19,7 +19,7 @@ const Index = ({ location }) => (
           I’m a Software Engineer - II at Adobe India.
           <br />
           <br />
-          Check out my <Link className={styles.link} to={prefixLink('/work/')}>work</Link>.
+          Check out my <Link className={styles.link} to="/work">work</Link>.
         </h1>
       </Wrapper>
     </Fullscreen>

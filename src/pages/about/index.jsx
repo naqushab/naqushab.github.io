@@ -20,7 +20,7 @@ const About = ({ location }) => (
           <p>I’m a full-time Lead Software Engineer at <OutboundLink to="http://www.adobe.com/in/">Adobe, India</OutboundLink> in the <OutboundLink to="https://acrobat.adobe.com/in/en/">Document Cloud</OutboundLink> team.</p>
           <p>I got my Computer Engineering degree from <OutboundLink to="https://www.amu.ac.in/principal.jsp?did=10147">ZHCET, Aligarh Muslim University</OutboundLink> and got my schooling from St. Michael's Convent School.</p>
           <p>Apart from this, I also spend a lot of time around new technologies and try to contribute to open-source as much as I can.</p>
-          <p>If you have any great opportunities to discuss, <Link to={prefixLink('/contact/')}>get in touch</Link>.</p>
+          <p>If you have any great opportunities to discuss, <Link to="/contact">get in touch</Link>.</p>
           
           <h2>Specialities</h2>
           <p>1. Problem Solving</p>

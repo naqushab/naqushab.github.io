@@ -50,7 +50,7 @@ const projects = [
     },
     slug: 'hex-app',
     title: 'Hex',
-    cover: require('./hex.jpg'),
+    cover: require('./hex.png'),
     theme: {
       background: '#a77e60',
     },
