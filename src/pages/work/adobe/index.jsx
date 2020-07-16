@@ -1,41 +1,34 @@
 import React from 'react';
-import { projects } from 'data/projects.json';
+import projects from '../../../data/projects.js';
 
-import Carousel from 'components/carousel';
-import Iphone from 'components/iphone';
-import Macbook from 'components/macbook';
-import OutboundLink from 'components/outbound-link';
-import Wrapper from 'components/wrapper';
-import { ProjectDescription, ProjectIntro, ProjectPage } from 'components/project';
+import Carousel from '../../../components/carousel';
+import Macbook from '../../../components/macbook';
+import OutboundLink from '../../../components/outbound-link';
+import Wrapper from '../../../components/wrapper';
+import { ProjectDescription, ProjectIntro, ProjectPage } from '../../../components/project';
 
-import coverImage from 'components/project/img/adobe.png';
+const images = {
+  desktop: [
+    { src: require('./img/1.jpg'), description: 'Adobe Logo' },
+    { src: require('./img/2.jpg'), description: 'Adobe Acrobat' },
+  ]
+};
 
-const images = [
-  {
-    src: require('./img/1.jpg'),
-    description: 'Adobe logo',
-  },
-  {
-    src: require('./img/2.jpg'),
-    description: 'Adobe Acrobat',
-  },
-];
-
-const Adobe = () => {
-  const project = projects.find(_project => _project.slug === 'adobe');
+const Adobe = ({ location }) => {
+  const project = projects.find(p => p.slug === 'adobe');
 
   const image = (
-    <img src={coverImage} alt="Cover" />
+    <img src={project.cover} alt="Cover" />
   );
 
   const macbooks = (
     <Macbook>
-      <Carousel images={images} />
+      <Carousel images={images.desktop} />
     </Macbook>
   );
 
   return (
-    <ProjectPage project={project}>
+    <ProjectPage project={project} location={location}>
       <ProjectIntro project={project} media={image} />
       <ProjectDescription media={macbooks}>
         <h3>Responsibilities</h3>
@@ -44,11 +37,9 @@ const Adobe = () => {
         <p>3. Development and Deployment of a Jenkins framework to identify regressions in product across different configurations using Python, Batch, JS</p>
         <p>4. Development of various automated tools and mechanisms to increase productivity and reduce manual efforts</p>
         <p>5. Writing unit tests and feature tests of various work-flows involved in Adobe Acrobat</p>
-
         <h3>Role</h3>
-        <p>I got hired at Adobe on Jun 27, 2016 as a Software Engineer in the <OutboundLink to="https://acrobat.adobe.com/in/en/">Document Cloud</OutboundLink> team. After 1 year at Adobe, I became Software Engineer - II.</p>
+        <p>I got hired at Adobe on Jun 27, 2016 as a Software Engineer in the <OutboundLink to="https://acrobat.adobe.com/in/en/">Document Cloud</OutboundLink> team. I am currently in Acrobat team which currently works on Liquid Mode functionality.</p>
       </ProjectDescription>
-      
     </ProjectPage>
   );
 };
