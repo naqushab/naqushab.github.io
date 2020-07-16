@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Link from 'gatsby-link';
 import 'react-github-button/assets/style.css';
 
-import GitHubButton from 'react-github-button';
 import Hamburger from '../hamburger';
 import Menu from '../menu';
 import Wrapper from '../wrapper';
@@ -44,7 +43,6 @@ export default class Header extends Component {
             <h1 className={styles.title}>
               <Link to="/">Naqushab Neyazee</Link>
             </h1>
-            <GitHubButton type="stargazers" namespace="naqushab" repo="naqushab.github.io" className={styles.github} />
             <Hamburger onClick={() => this.toggleMenu()} active={menuActive} className={styles.hamburger} />
           </div>
         </Wrapper>

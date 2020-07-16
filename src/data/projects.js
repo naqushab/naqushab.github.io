@@ -10,7 +10,7 @@ const projects = [
     title: "Adobe",
     cover: require('./adobe.png'),
     theme: {
-      background: '#5ab6ff',
+      background: '#a9a9a9',
     },
   },
 
@@ -24,7 +24,7 @@ const projects = [
     title: 'Dabble Point',
     cover: require('./dabblepoint.png'),
     theme: {
-      background: '#00a5d1',
+      background: '#00bfff',
     },
   },
   {
@@ -38,7 +38,7 @@ const projects = [
     title: 'Search Engine Scrapy',
     cover: require('./searchenginescrapy.png'),
     theme: {
-      background: '#F7F7F7',
+      background: '#90ee90',
       light: true,
     },
   },
