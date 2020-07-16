@@ -31,39 +31,29 @@
   padding-right: 0;
 }
 
-.mrRed {
-  composes: mrRed from "../themes.module.css";
-}
-
-.mrRed .inner {
-  background-position-x: 15%;
-  background-size: auto 50%;
-}
-
-.ahm .inner {
-  background-position-x: 80%;
-  background-size: auto 50%;
-}
-
-.lifeWithBird .inner {
-  background-position-x: 13%;
-  background-size: auto 95%;
-  background-position-y: bottom;
-}
-
-.chadstone .inner {
+.searchenginescrapy .inner {
   background-position-x: 78.5%;
   background-position-y: bottom;
 }
 
-.kindyNow .inner {
-  background-position-x: 15%;
-  background-size: auto 75%;
+.adobe .inner {
+  background-position-x: 78.5%;
+  background-position-y: bottom;
 }
 
-.click .inner {
-  background-position-x: 75%;
-  background-size: auto 65%;
+.dabblePoint .inner {
+  background-position-x: 15%;
+  background-size: auto 95%;
+  background-position-y: bottom;
+}
+
+.hexApp {
+  composes: hexApp from "../themes.module.css";
+}
+
+.hexApp .inner {
+  background-position-x: 15%;
+  background-size: auto 95%;
 }
 
 @media (--small) {
