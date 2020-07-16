@@ -1,0 +1,100 @@
+{
+  "assetsByChunkName": {
+    "component---src-pages-work-index-jsx": [
+      "component---src-pages-work-index-jsx-3331697c64dbd2874b8a.js",
+      "component---src-pages-work-index-jsx-3331697c64dbd2874b8a.js.map"
+    ],
+    "component---src-pages-work-adobe-index-jsx": [
+      "component---src-pages-work-adobe-index-jsx-5d7771847b26580b9be4.js",
+      "component---src-pages-work-adobe-index-jsx-5d7771847b26580b9be4.js.map"
+    ],
+    "path---work": [
+      "path---work-a0e39f21c11f6a62c5ab.js",
+      "path---work-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---": [
+      "path----557518bd178906f8d58a.js",
+      "path----557518bd178906f8d58a.js.map"
+    ],
+    "component---src-pages-work-dabble-point-index-jsx": [
+      "component---src-pages-work-dabble-point-index-jsx-c13aa2f105704c0d01a5.js",
+      "component---src-pages-work-dabble-point-index-jsx-c13aa2f105704c0d01a5.js.map"
+    ],
+    "component---src-pages-work-hex-app-index-jsx": [
+      "component---src-pages-work-hex-app-index-jsx-753bc1e6f8f27436f655.js",
+      "component---src-pages-work-hex-app-index-jsx-753bc1e6f8f27436f655.js.map"
+    ],
+    "component---src-layouts-index-jsx": [
+      "component---src-layouts-index-jsx-b5cb86ecb1655bfcf5e1.js",
+      "component---src-layouts-index-jsx-b5cb86ecb1655bfcf5e1.js.map"
+    ],
+    "component---src-pages-contact-index-jsx": [
+      "component---src-pages-contact-index-jsx-8289afb5c4989930b680.js",
+      "component---src-pages-contact-index-jsx-8289afb5c4989930b680.js.map"
+    ],
+    "component---src-pages-about-index-jsx": [
+      "component---src-pages-about-index-jsx-7dd60082df4e8c8d1a81.js",
+      "component---src-pages-about-index-jsx-7dd60082df4e8c8d1a81.js.map"
+    ],
+    "path---index": [
+      "path---index-a0e39f21c11f6a62c5ab.js",
+      "path---index-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---work-adobe": [
+      "path---work-adobe-a0e39f21c11f6a62c5ab.js",
+      "path---work-adobe-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---work-hex-app": [
+      "path---work-hex-app-a0e39f21c11f6a62c5ab.js",
+      "path---work-hex-app-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "commons": [
+      "commons-90533bb9dd8d1400d27a.js",
+      "build-js-styles.css",
+      "commons-90533bb9dd8d1400d27a.js.map",
+      "build-js-styles.css.map"
+    ],
+    "path---404-html": [
+      "path---404-html-a0e39f21c11f6a62c5ab.js",
+      "path---404-html-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "component---src-pages-404-jsx": [
+      "component---src-pages-404-jsx-7ed0978c5e34eccc353e.js",
+      "component---src-pages-404-jsx-7ed0978c5e34eccc353e.js.map"
+    ],
+    "path---contact": [
+      "path---contact-a0e39f21c11f6a62c5ab.js",
+      "path---contact-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "component---src-pages-work-searchenginescrapy-index-jsx": [
+      "component---src-pages-work-searchenginescrapy-index-jsx-7e604cdbd63310e39a97.js",
+      "component---src-pages-work-searchenginescrapy-index-jsx-7e604cdbd63310e39a97.js.map"
+    ],
+    "component---src-pages-index-jsx": [
+      "component---src-pages-index-jsx-862672326c664b3a0c7b.js",
+      "component---src-pages-index-jsx-862672326c664b3a0c7b.js.map"
+    ],
+    "path---work-dabble-point": [
+      "path---work-dabble-point-a0e39f21c11f6a62c5ab.js",
+      "path---work-dabble-point-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "app": [
+      "app-cc769051dc16e4fa896c.js",
+      "build-js-styles.css",
+      "app-cc769051dc16e4fa896c.js.map",
+      "build-js-styles.css.map"
+    ],
+    "path---404": [
+      "path---404-a0e39f21c11f6a62c5ab.js",
+      "path---404-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---work-searchenginescrapy": [
+      "path---work-searchenginescrapy-a0e39f21c11f6a62c5ab.js",
+      "path---work-searchenginescrapy-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---about": [
+      "path---about-a0e39f21c11f6a62c5ab.js",
+      "path---about-a0e39f21c11f6a62c5ab.js.map"
+    ]
+  }
+}
