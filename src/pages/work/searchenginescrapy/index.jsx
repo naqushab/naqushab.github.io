@@ -1,48 +1,39 @@
 import React from 'react';
-import { projects } from 'data/projects.json';
+import projects from '../../../data/projects';
 
-import Carousel from 'components/carousel';
-import Iphone from 'components/iphone';
-import Macbook from 'components/macbook';
-import OutboundLink from 'components/outbound-link';
-import Wrapper from 'components/wrapper';
-import { ProjectDescription, ProjectIntro, ProjectPage } from 'components/project';
+import Carousel from '../../../components/carousel';
+import Macbook from '../../../components/macbook';
+import OutboundLink from '../../../components/outbound-link';
+import Wrapper from '../../../components/wrapper';
+import { ProjectDescription, ProjectIntro, ProjectPage } from '../../../components/project';
 
-import coverImage from 'components/project/img/searchenginescrapy.png';
 import styles from './styles.module.css';
 
-const images = [
-  {
-    src: require('./img/1.jpg'),
-    description: 'Command line execute',
-  },
-  {
-    src: require('./img/2.jpg'),
-    description: 'Command line running ends',
-  },
-  {
-    src: require('./img/3.jpg'),
-    description: 'Output of scraping and crawling',
-  },
-];
+const images = {
+  desktop: [
+    { src: require('./img/1.jpg'), description: 'Command line Execute' },
+    { src: require('./img/2.jpg'), description: 'Command line running ends' },
+    { src: require('./img/3.jpg'), description: 'Output of Scraper' },
+  ]
+};
 
-const Searchenginescrapy = () => {
-  const project = projects.find(_project => _project.slug === 'searchenginescrapy');
+const Searchenginescrapy = ({ location }) => {
+  const project = projects.find(p => p.slug === 'searchenginescrapy');
 
   const logo = (
     <div className={styles.image}>
-      <img src={coverImage} alt="Cover" />
+      <img src={project.cover} alt="Cover" />
     </div>
   );
 
   const macbooks = (
     <Macbook invert>
-      <Carousel images={images} />
+      <Carousel images={images.desktop} />
     </Macbook>
   );
 
   return (
-    <ProjectPage project={project}>
+    <ProjectPage project={project} location={location}>
       <ProjectIntro project={project} media={logo} />
       <ProjectDescription media={macbooks}>
         <h3>Project Details</h3>
@@ -50,7 +41,6 @@ const Searchenginescrapy = () => {
         <p>1. It was developed using <OutboundLink to="https://scrapy.org">Scrapy</OutboundLink></p>
         <p>2. Programming language used was Python 2.7</p>
         <p>3. It was a provision of delay and UA spoofing so that it can't be detected while scraping off data from Search Engines.</p>
-
         <h3>Role</h3>
         <p>I have developed this website for learnng Python and Scrapy. I was very interested to crawl some websites for fetching urls of content I was interested in for an another project, which was the main motive of making this project.</p>
       </ProjectDescription>
