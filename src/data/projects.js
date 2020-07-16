@@ -34,7 +34,7 @@ const projects = [
     links: {
       website: 'https://naqushab.github.io/SearchEngineScrapy/',
     },
-    slug: 'searchEngineScrapy',
+    slug: 'searchenginescrapy',
     title: 'Search Engine Scrapy',
     cover: require('./searchenginescrapy.png'),
     theme: {
