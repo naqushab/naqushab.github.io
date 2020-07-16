@@ -1,17 +1,20 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 
-import OutboundLink from 'components/outbound-link';
-import Wrapper from 'components/wrapper';
+import OutboundLink from '../../outbound-link';
+import Wrapper from '../../wrapper';
+
 
 import styles from './styles.module.css';
 
-const ProjectIntro = ({ cta, media, project }) => (
+const ProjectIntro = ({ media, project }) => (
   <Wrapper className={styles.cover}>
     <div className={styles.intro}>
       <h1>{project.title}</h1>
       <p>{project.clientDescription || project.description}</p>
       {cta || (
         <OutboundLink to={project.cta.link}>{project.cta.text}</OutboundLink>
+      {project.links.website && <OutboundLink to={project.links.website}>View website</OutboundLink>}
+
       )}
     </div>
     <div className={styles.media}>
@@ -19,11 +22,5 @@ const ProjectIntro = ({ cta, media, project }) => (
     </div>
   </Wrapper>
 );
-
-ProjectIntro.propTypes = {
-  cta: PropTypes.node,
-  media: PropTypes.node,
-  project: PropTypes.object,
-};
 
 export default ProjectIntro;

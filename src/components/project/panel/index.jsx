@@ -1,15 +1,20 @@
-import React, { PropTypes } from 'react';
-import { prefixLink } from 'gatsby-helpers';
+import React from 'react';
+import Link from 'gatsby-link';
+import classNames from 'classnames';
 
-import Wrapper from 'components/wrapper';
-import { Link } from 'react-router';
+import Wrapper from '../../wrapper';
 
+import themeStyles from '../themes.module.css';
 import styles from './styles.module.css';
 
 const ProjectPanel = ({ project }) => (
-  <Link to={prefixLink(`/work/${project.slug}/`)} className={styles[project.className]}>
+  <Link
+    to={`/work/${project.slug}`}
+    className={classNames(styles.panel, themeStyles[project.theme.light ? 'light' : 'dark'], styles[project.className])}
+    style={{ background: `${project.theme.background}` }}
+  >
     <Wrapper>
-      <div className={styles.inner}>
+      <div className={styles.inner} style={{ backgroundImage: `url(${project.cover})` }}>
         <div className={styles.content}>
           <h2>{project.title}</h2>
           <p>{project.description}</p>
@@ -18,9 +23,5 @@ const ProjectPanel = ({ project }) => (
     </Wrapper>
   </Link>
 );
-
-ProjectPanel.propTypes = {
-  project: PropTypes.object,
-};
 
 export default ProjectPanel;

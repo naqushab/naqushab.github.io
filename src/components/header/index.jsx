@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
-import { prefixLink } from 'gatsby-helpers';
+import Link from 'gatsby-link';
+import 'react-github-button/assets/style.css';
 
 import GitHubButton from 'react-github-button';
-import Hamburger from 'components/hamburger';
-import Menu from 'components/menu';
-import Wrapper from 'components/wrapper';
-import { IndexLink } from 'react-router';
+import Hamburger from '../hamburger';
+import Menu from '../menu';
+import Wrapper from '../wrapper';
 
 import styles from './styles.module.css';
-import 'react-github-button/assets/style.css';
 
 export default class Header extends Component {
   constructor(props) {
@@ -43,8 +42,9 @@ export default class Header extends Component {
         <Wrapper>
           <div className={styles.inner}>
             <h1 className={styles.title}>
-              <IndexLink to={prefixLink('/')}>Naqushab Neyazee</IndexLink>
+              <Link to="/">Naqushab Neyazee</Link>
             </h1>
+            <GitHubButton type="stargazers" namespace="naqushab" repo="naqushab.github.io" className={styles.github} />
             <Hamburger onClick={() => this.toggleMenu()} active={menuActive} className={styles.hamburger} />
           </div>
         </Wrapper>

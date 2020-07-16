@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import classNames from 'classnames';
 
 import styles from './styles.module.css';
@@ -6,7 +6,7 @@ import styles from './styles.module.css';
 const Fullscreen = ({ children, className, firstItem }) => {
   const containerClassName = classNames(
     firstItem ? styles.first : styles.fullscreen,
-    className
+    className,
   );
 
   return (
@@ -14,12 +14,6 @@ const Fullscreen = ({ children, className, firstItem }) => {
       {children}
     </div>
   );
-};
-
-Fullscreen.propTypes = {
-  firstItem: PropTypes.bool,
-  children: PropTypes.node,
-  className: PropTypes.string,
 };
 
 export default Fullscreen;

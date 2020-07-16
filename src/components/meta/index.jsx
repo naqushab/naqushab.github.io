@@ -1,12 +1,12 @@
-import React, { PropTypes } from 'react';
-import { config } from 'config';
+import React from 'react';
 import Helmet from 'react-helmet';
+import { siteMetadata as config } from '../../../gatsby-config';
 
-const Meta = ({ description, noIndex, title }, { location }) => {
-  const mainTitle = `${config.siteTitle} - Software Engineer - II`;
-  const metaTitle = title ? `${title} | ${mainTitle}` : mainTitle;
-  const metaDescription = description || config.description;
-  const absoluteUrl = `${config.siteUrl}${location.pathname}`;
+const Meta = props => {
+  const mainTitle = `${config.title} -Lead Software Engineer`;
+  const metaTitle = props.title ? `${props.title} | ${mainTitle}` : mainTitle;
+  const metaDescription = props.description || config.description;
+  const absoluteUrl = `${config.url}${props.location.pathname}`;
 
   const meta = [
     { name: 'description', content: metaDescription },
@@ -18,23 +18,13 @@ const Meta = ({ description, noIndex, title }, { location }) => {
     { property: 'twitter:url', content: absoluteUrl },
   ];
 
-  if (noIndex) {
+  if (props.noIndex) {
     meta.push({ name: 'robots', content: 'noindex' });
   }
 
   return (
     <Helmet title={metaTitle} meta={meta} />
   );
-}
-
-Meta.propTypes = {
-  description: PropTypes.string,
-  noIndex: PropTypes.bool,
-  title: PropTypes.string,
-};
-
-Meta.contextTypes = {
-  location: PropTypes.object,
 };
 
 export default Meta;

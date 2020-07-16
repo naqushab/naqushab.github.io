@@ -1,16 +1,15 @@
-import React, { PropTypes } from 'react';
-import { prefixLink } from 'gatsby-helpers';
+import React from 'react';
+import Link from 'gatsby-link';
 
-import Fullscreen from 'components/fullscreen';
-import Wrapper from 'components/wrapper';
-import { IndexLink, Link } from 'react-router';
+import Fullscreen from '../fullscreen';
+import Wrapper from '../wrapper';
 
 import styles from './styles.module.css';
 
 const Menu = ({ active, onNavClick }) => {
   const linkProps = {
     onClick: onNavClick,
-    activeClassName: styles.active,
+    // activeClassName: styles.active,
   };
 
   return (
@@ -19,27 +18,22 @@ const Menu = ({ active, onNavClick }) => {
         <nav>
           <ul>
             <li className={styles.item}>
-              <IndexLink {...linkProps} to={prefixLink('/')}>Home</IndexLink>
+              <Link {...linkProps} to="/">Home</Link>
             </li>
             <li className={styles.item}>
-              <Link {...linkProps} to={prefixLink('/about/')}>About</Link>
+              <Link {...linkProps} to="/about">About</Link>
             </li>
             <li className={styles.item}>
-              <Link {...linkProps} to={prefixLink('/work/')}>Work</Link>
+              <Link {...linkProps} to="/work">Work</Link>
             </li>
             <li className={styles.item}>
-              <Link {...linkProps} to={prefixLink('/contact/')}>Contact</Link>
+              <Link {...linkProps} to="/contact">Contact</Link>
             </li>
           </ul>
         </nav>
       </Wrapper>
     </Fullscreen>
   );
-};
-
-Menu.propTypes = {
-  active: PropTypes.bool,
-  onNavClick: PropTypes.func,
 };
 
 export default Menu;

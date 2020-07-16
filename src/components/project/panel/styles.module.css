@@ -1,6 +1,5 @@
-@import '../../../assets/css/variables.css';
+@import '../../../css/variables.css';
 
-/*@TODO: Use <imgs> instead of backgrounds for better positioning control, cleaner css and accessibility*/
 .panel {
   display: flex;
   font-size: 1.125rem;
@@ -32,48 +31,39 @@
   padding-right: 0;
 }
 
-.hexApp {
-  composes: panel;
-  composes: hexApp from "../themes.module.css";
+.mrRed {
+  composes: mrRed from "../themes.module.css";
 }
 
-.hexApp .inner {
-  background-image: url('../img/hex-app.png');
+.mrRed .inner {
   background-position-x: 15%;
   background-size: auto 50%;
 }
 
-.searchenginescrapy {
-  composes: panel;
-  composes: searchenginescrapy from "../themes.module.css";
-}
-
-.searchenginescrapy .inner {
-  background-image: url('../img/searchenginescrapy.png');
+.ahm .inner {
   background-position-x: 80%;
   background-size: auto 50%;
 }
 
-.dabblePoint {
-  composes: panel;
-  composes: dabblePoint from "../themes.module.css";
-}
-
-.dabblePoint .inner {
-  background-image: url('../img/dabble-point.png');
+.lifeWithBird .inner {
   background-position-x: 13%;
-  background-size: auto 50%;
+  background-size: auto 95%;
+  background-position-y: bottom;
 }
 
-.adobe {
-  composes: panel;
-  composes: adobe from "../themes.module.css";
+.chadstone .inner {
+  background-position-x: 78.5%;
+  background-position-y: bottom;
 }
 
-.adobe .inner {
-  background-image: url('../img/adobe.png');
-  background-position-x: 80%;
-  background-size: auto 50%;
+.kindyNow .inner {
+  background-position-x: 15%;
+  background-size: auto 75%;
+}
+
+.click .inner {
+  background-position-x: 75%;
+  background-size: auto 65%;
 }
 
 @media (--small) {
