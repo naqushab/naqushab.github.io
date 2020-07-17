@@ -12,7 +12,7 @@ const Contact = ({ title }) => (
       Say hello and send an email:<br />
       <a href="mailto:naqushab.neyazee24@gmail.com?subject=Hello%20Naqushab!" className={styles.link}>naqushab.neyazee24@gmail.com</a>
     </p>
-    <h3>You can see my resume <OutboundLink to="https://www.visualcv.com/naqushabneyazee"><u>here</u></OutboundLink></h3>
+    <h3>You can see my resume <OutboundLink to="https://drive.google.com/file/d/1ITr4NsQCHexlACpFRgW4x1Ya9MRfI_KP/view?usp=sharing"><u>here</u></OutboundLink></h3>
     <div className={styles.lineBreak} />
     <ul className={styles.social}>
       <li>
@@ -36,7 +36,7 @@ const Contact = ({ title }) => (
         </OutboundLink>
       </li>
       <li>
-        <OutboundLink to="https://www.visualcv.com/naqushabneyazee/pdf">
+        <OutboundLink to="https://drive.google.com/file/d/1ITr4NsQCHexlACpFRgW4x1Ya9MRfI_KP/view?usp=sharing">
           <Icon name="download" />
         </OutboundLink>
       </li>
