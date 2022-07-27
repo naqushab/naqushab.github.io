@@ -4,11 +4,19 @@ on:
       - master
 
 jobs:
-  deploy:
+  buid_and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
         with:
           submodules: true
-      - uses: actions/setup-go@v2
-      - run: make build
+      
+      - name: Install and Build 🔧
+        uses: actions/setup-go@v2
+        run: make build
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist
