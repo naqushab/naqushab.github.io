@@ -158,7 +158,7 @@ func getPosts() (posts []Post) {
 func parsePost(file os.FileInfo, data []byte) Post {
 	date := strings.Replace(file.Name(), ".md", "", -1)
 
-	html := blackfriday.Run(data)
+	html := blackfriday.Run(data, blackfriday.WithExtensions(blackfriday.CommonExtensions))
 	reader := bytes.NewReader(html)
 	doc, _ := goquery.NewDocumentFromReader(reader)
 	title := doc.Find("h1").First().Remove().Text()
