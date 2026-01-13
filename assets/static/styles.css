@@ -111,6 +111,33 @@ table {
   border-spacing: 0;
   font-size: 1em;
   text-align: left;
+  width: 100%;
+  margin: 1.5em 0;
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+th,
+td {
+  padding: 0.75em 1em;
+  border: 1px solid #444;
+  vertical-align: top;
+}
+
+th {
+  background: #222;
+  color: #fff;
+  font-family: Book, Arial, Helvetica, sans-serif;
+  font-weight: normal;
+}
+
+tr:nth-child(even) {
+  background: #1a1a1a;
+}
+
+tr:hover {
+  background: #252525;
 }
 
 blockquote {
