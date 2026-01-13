@@ -1,3 +1,3 @@
 # naqushab.github.io
 
-Personal website
+Personal website of Naqushab Neyazee
