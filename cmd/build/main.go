@@ -12,7 +12,9 @@ import (
 
 	"github.com/PuerkitoBio/goquery"
 	"github.com/gosimple/slug"
-	"gopkg.in/russross/blackfriday.v2"
+	"github.com/yuin/goldmark"
+	"github.com/yuin/goldmark/extension"
+	"github.com/yuin/goldmark/parser"
 )
 
 type Document struct {
@@ -158,11 +160,30 @@ func getPosts() (posts []Post) {
 func parsePost(file os.FileInfo, data []byte) Post {
 	date := strings.Replace(file.Name(), ".md", "", -1)
 
-	html := blackfriday.Run(data, blackfriday.WithExtensions(blackfriday.CommonExtensions))
-	reader := bytes.NewReader(html)
-	doc, _ := goquery.NewDocumentFromReader(reader)
+	// Configure goldmark with GitHub Flavored Markdown (GFM)
+	// This enables Tables, Strikethrough, Task Lists, etc.
+	md := goldmark.New(
+		goldmark.WithExtensions(extension.GFM),
+		goldmark.WithParserOptions(
+			parser.WithAutoHeadingID(),
+		),
+	)
+
+	var buf bytes.Buffer
+	if err := md.Convert(data, &buf); err != nil {
+		// In a real app you might want to log this instead of panic
+		panic(err)
+	}
+
+	doc, _ := goquery.NewDocumentFromReader(&buf)
+	
+	// Extract and remove the H1 title
 	title := doc.Find("h1").First().Remove().Text()
-	formattedHtml, _ := doc.Html()
+	
+	// Extract the HTML content. 
+	// goquery wraps fragments in <html><head></head><body>...</body>.
+	// We use Find("body").Html() to get just the inner content.
+	formattedHtml, _ := doc.Find("body").Html()
 
 	return Post{
 		Title:       title,
